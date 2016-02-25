@@ -4,7 +4,7 @@
 
 Name:           %{?scl_prefix}%{pkg_name}
 Version:        2.6
-Release:        6.12%{?dist}
+Release:        6.13%{?dist}
 Summary:        Maven Resources Plugin
 
 License:        ASL 2.0
@@ -13,7 +13,7 @@ Source0:        http://repo2.maven.org/maven2/org/apache/maven/plugins/%{pkg_nam
 
 BuildArch: noarch
 
-BuildRequires: %{?scl_prefix_java_common}maven-local
+BuildRequires: %{?scl_prefix}maven-local
 BuildRequires: %{?scl_prefix}maven-plugin-plugin
 BuildRequires: %{?scl_prefix}maven-resources-plugin
 BuildRequires: %{?scl_prefix}maven-jar-plugin
@@ -68,6 +68,9 @@ set -e -x
 %doc LICENSE NOTICE
 
 %changelog
+* Mon Feb 08 2016 Michal Srb <msrb@redhat.com> - 2.6-6.13
+- Fix BR on maven-local & co.
+
 * Mon Jan 11 2016 Michal Srb <msrb@redhat.com> - 2.6-6.12
 - maven33 rebuild #2
 
